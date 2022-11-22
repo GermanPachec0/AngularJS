@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+<input type="text" placeholder="name" formControlName = "name">
+{{form.get('name')?.value}}
+<input type="checkbox" formControlName="isChecked">
+
+</form>
+
+{{form.value | json}}
+<button [disabled]="form.get('name')?.errors">enviar</button>
